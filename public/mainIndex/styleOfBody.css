@@ -1,0 +1,358 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    padding: 1px;
+}
+
+.banner h1 {
+    margin-left: 50%;
+}
+
+.banner-text :hover {
+    cursor: pointer;
+}
+
+.mainContent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+}
+.sncbContainer {
+    overflow-y: auto;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+.menuDetails{
+    display: table-column;
+    transition: width 1s ease-in-out;
+    width: 0%;
+    overflow: auto;
+    background-color: #f1f1f1;
+    white-space: nowrap;
+}
+
+.menuDetails.display{
+    width: 20%;
+}
+
+.menuContent-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.menuContent-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.menuContent-item:hover{
+    background-color: #3498db;
+}
+
+.searchTrain,
+.datePicker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.trainImg{
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+}
+.searchTrain {
+    position: relative;
+}
+
+.searchTrain input,
+.datePicker input {
+    padding: 18px;
+    margin: 5px;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.searchTrain input[type="text"],
+.datePicker input[type="text"] {
+    width: 300px;
+}
+
+.searchTrain button,
+.datePicker button {
+    padding: 19px;
+    margin: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.searchTrain button:hover,
+.datePicker button:hover {
+    background-color: #2c3e50;
+}
+
+.searchTrainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    font-size: 22px;
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 200%;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+
+
+/* Dropdown styles */
+#dropdownDeparture {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 50%;
+}
+
+#dropdownArrival {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: 50%;
+}
+
+
+/*style pour le resultat de la recherche de connections train*/
+.result-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5% 10%;
+}
+
+.train-result {
+    border-bottom: 2px solid #3498db;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.train-info {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.train-name {
+    font-size: 1em;
+    margin-top: 5px;
+    color: #555;
+}
+
+.timeDeparture,
+.timeArrival,
+.departure,
+.arrival,
+.platform-departure,
+.platform-arrival,
+.delay,
+.train-status{
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.departure,
+.arrival {
+    text-transform: uppercase;
+    color: #555;
+}
+
+.platform-departure,
+.platform-arrival {
+    color: #3498db;
+}
+
+.delay,
+.departure-delay,
+.train-status{
+    color: #e74c3c;
+}
+
+.favorite-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #e74c3c;
+}
+
+.favorite-btn:hover {
+    color: #c0392b;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.notification.show {
+    display: block;
+    background-color: #4CAF50;
+}
+.notification.error {
+    display: block;
+    background-color: #e74c3c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* style logo loading*/
+
+.loading {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: visible;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.loading img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.menu{
+    width: 10%;
+}
+
+
+.menuImg {
+    width: 40%;
+    height: 40%;
+    cursor: pointer;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 9% 1% 10%;
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 200%;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu:hover .dropdown-menu {
+    display: block;
+}
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="StyleOfBody.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.css">
+    <script type="module" src="scriptAPI.js" defer></script>
+    <title>Reveillo'train</title>
+</head>
+<body>
+
+<template id="train-template">
+    <div class="train-result">
+        <div class="train-info">
+            <span class="train-icon">&#128642;</span> Train #
+            <div class="train-name"></div>
+        </div>
+        <div class="timeDeparture"></div>
+        <div class="timeArrival"></div>
+        <div class="departure">
+            <div class="departure-gare"></div>
+            <div class="platform-departure"></div>
+            <div class="departure-delay"></div>
+        </div>
+        <div class="arrival">
+            <div class="arrival-gare"></div>
+            <div class="platform-arrival"></div>
+            <div class="delay"></div>
+        </div>
+
+        <div class="train-status"></div>
+
+        <button class="favorite-btn">&#10084;</button>
+    </div>
+    <div id="notification" class="notification">
+        <p id="notification-text"></p>
+    </div>
+</template>
+
+
+<div class="banner">
+    <div class="banner-text">
+        <h1>Reveilo'TRAIN</h1>
+    </div>
+    <div class="menu">
+        <img class="menuImg" src="menu-icon-PNG-1.webp">
+    </div>
+</div>
+
+<div class="mainContent">
+
+    <div class="sncbContainer">
+        <div class="searchTrainContainer">
+            <div class="searchTrain">
+                <div class="dropdown">
+                    <input type="text" id="departureStation" placeholder="Namur" autocomplete="off">
+                    <div id="dropdownDeparture" class="dropdown-content"></div>
+                </div>
+
+                <div class="dropdown">
+                    <input type="text" id="arrivalStation" placeholder="Bruxelles" autocomplete="off">
+                    <div id="dropdownArrival" class="dropdown-content"></div>
+                </div>
+                <button id="searchButton">Rechercher</button>
+            </div>
+
+            <div class="datePicker">
+                <input type="text" id="datetimePicker" placeholder="Sélectionner la date et l'heure">
+            </div>
+        </div>
+        <div class="result">
+            <div class="result-container">
+                <div id="loading" class="loading">
+                    <img src="path_to_your_logo" alt="Loading...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menuDetails">
+        <div class="menuContent-container">
+            <div class="menuContent-item">
+                <a href="body.html">Recherche</a>
+            </div>
+            <div class="menuContent-item">
+                <a href="favoris.html">Favoris</a>
+            </div>
+            <div class="menuContent-item">
+                <a href="about.html">A propos</a>
+            </div>
+            <div class="imageTrainStyle">
+                <img class="trainImg" src="train.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <p>&copy; 2024 Reveilo'TRAIN Bralion Louis</p>
+</footer>
+
+</body>
+</html>

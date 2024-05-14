@@ -1,0 +1,17 @@
+{
+  "name": "reveillotrainfonctionnel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor serverAPI.js"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "irail-stations": "^0.1.5",
+    "sqlite3": "^5.1.7",
+    "supervisor": "^0.12.0"
+  }
+}
