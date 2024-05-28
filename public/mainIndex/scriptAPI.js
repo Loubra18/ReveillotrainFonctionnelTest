@@ -12,6 +12,7 @@ const mainMenuSlideInn = document.querySelector('.menuDetails');
 const menuButton = document.querySelector('.menu');
 let isSLideInn = false;
 const bannerTextButton = document.querySelector('.banner-text');
+const loadingContainer = document.getElementById('loading-container');
 
 main();
 
@@ -54,10 +55,20 @@ async function main() {
     searchButton.addEventListener('click', getTrainAvailable(dateTimePicker));
 }
 
+
+function showLoading() {
+    loadingContainer.style.display = 'block';
+}
+
+function hideLoading() {
+    loadingContainer.style.display = 'none';
+
+}
 //affiche les trains dispo pour ce trajet
 function getTrainAvailable(dateTimePicker) {
     return async function () {
         try {
+            showLoading();
             resultContainer.innerHTML = '';
             loadingLogo.style.display = 'block';
             const dateObject = dateTimePicker.selectedDates[0];
@@ -88,6 +99,8 @@ function getTrainAvailable(dateTimePicker) {
                 alert('Erreur :', err);
                 window.location.reload();
             }
+        } finally {
+            hideLoading();
         }
     };
 }
