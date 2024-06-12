@@ -14,7 +14,6 @@ body, html {
     align-items: center;
     background-color: #3498db;
     color: white;
-    padding: 1px;
 }
 
 .banner h1 {
@@ -23,6 +22,9 @@ body, html {
 
 .banner-text :hover {
     cursor: pointer;
+}
+.banner-text {
+    font-size: 75%;
 }
 
 .mainContent {
@@ -360,8 +362,8 @@ a{
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* Caché par défaut */
-    z-index: 1000; /* Assurez-vous que cela est au-dessus de tout autre contenu */
+    display: none;
+    z-index: 1000;
 }
 
 #loadingImage{

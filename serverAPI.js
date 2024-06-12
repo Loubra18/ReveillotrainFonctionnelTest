@@ -128,7 +128,7 @@ app.get('/getTrain/', (req, res) => {
     });
 });
 
-//script pour l'arduino qui récupère les informations du favoris
+//endpoint pour l'arduino qui récupère les informations du favoris
 app.get('/getTrainForArduino/', (req, res) => {
     favoris.get('SELECT * FROM trainsFavoris', async (err, row) => {
         if (err) {

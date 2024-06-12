@@ -304,25 +304,3 @@ function displayMenu() {
     isSLideInn = true;
 }
 
-//ajoutter le trajet dans les favoris le stocker dans le local storage, et le récupérer pour l'afficher dans la page favoris.
-// Les numéros de train sont toujours les memes aux horasire de départ et d'arrivée (sauf les trains du week-end)
-
-
-
-// async function getDistrubanceData()
-// {
-//     const response = await fetch('https://api.irail.be/disturbances/?format=json&lineBreakCharacter="&lang=fr');
-//     const data = await response.json();
-//     if (data && data.disturbances) {
-//         // Extraire les noms des perturbations
-//         const disturbanceNames = data.disturbances.map(disturbance => disturbance.name);
-//
-//         // Afficher les noms des perturbations
-//         console.log(disturbanceNames);
-//     } else {
-//         console.log('Aucune donnée de perturbation disponible.');
-//     }
-// }
-//
-//
-// getDistrubanceData();
