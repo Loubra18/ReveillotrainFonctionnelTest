@@ -23,6 +23,7 @@ body, html {
 .banner-text :hover {
     cursor: pointer;
 }
+
 .banner-text {
     font-size: 75%;
 }
@@ -130,7 +131,6 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5%;
 }
 
 /* Dropdown Button */
@@ -357,6 +357,7 @@ a{
     display: block;
 }
 
+
 #loading-container{
     position: fixed;
     top: 60%;
@@ -377,5 +378,3 @@ a{
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
-
-
