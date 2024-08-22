@@ -25,11 +25,10 @@ body, html {
 }
 
 .mainContent {
-    height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
 }
 
 .main-container {
@@ -39,6 +38,7 @@ body, html {
     display: flex;
     flex-direction: column;
     padding: 1%;
+    overflow-y: auto;
 }
 
 .menuDetails{
@@ -109,7 +109,7 @@ a{
 
 .favorisInAlarm {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 50px auto 120px;
     background-color: #2196f3; /* Bleu vif */
     padding: 20px;
     border-radius: 8px;

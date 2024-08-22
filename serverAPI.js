@@ -129,7 +129,14 @@ app.get('/getTrain/', (req, res) => {
 });
 
 //endpoint pour l'arduino qui récupère les informations du favoris
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 app.get('/getTrainForArduino/', (req, res) => {
+    //a chaque requete http get, je récupère la date actuelle (locale du serveur)
+    const date = new Date();
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayOfWeek = daysOfWeek[date.getDay()];
+
+    console.log('day of week: '+dayOfWeek);
     favoris.get('SELECT * FROM trainsFavoris', async (err, row) => {
         if (err) {
             console.error(err.message);
